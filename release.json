@@ -1,0 +1,1266 @@
+{
+  "@probability": {
+    "type": "release",
+    "schema": {
+      "id": "urn:probability:schema:release@1",
+      "contentHash": "sha256:fa20d6bdd84711bf7a7a4c845d01d1020163acfdebd2a2d2eeb333901c472e3c"
+    },
+    "declaration": {
+      "formatVersion": 1,
+      "storageSchema": {
+        "id": "urn:probability:schema:release@1",
+        "contentHash": "sha256:fa20d6bdd84711bf7a7a4c845d01d1020163acfdebd2a2d2eeb333901c472e3c"
+      },
+      "projection": {
+        "kind": "storage-mapping",
+        "storageMapping": {
+          "id": "urn:probability:mapping:release-json@1",
+          "contentHash": "sha256:3badaf92a062b773562ec77cde8b06fd57a8d3c2da760a0ec538d72b86640864"
+        }
+      }
+    },
+    "schemas": {
+      "urn:probability:mapping:release-json@1": {
+        "kind": "storage-mapping",
+        "formatVersion": 1,
+        "id": "urn:probability:mapping:release-json@1",
+        "contentHash": "sha256:3badaf92a062b773562ec77cde8b06fd57a8d3c2da760a0ec538d72b86640864",
+        "dependencies": [],
+        "body": {
+          "model": "json-tree-v1",
+          "relations": {
+            "probability.release@1": {
+              "collection": {
+                "absent": "invalid",
+                "kind": "singleton",
+                "path": []
+              },
+              "fields": {
+                "files": {
+                  "path": [
+                    "files"
+                  ],
+                  "write": {}
+                },
+                "game": {
+                  "path": [
+                    "game"
+                  ],
+                  "write": {}
+                },
+                "version": {
+                  "path": [
+                    "version"
+                  ],
+                  "write": {}
+                }
+              },
+              "keys": {
+                "kind": {
+                  "kind": "literal",
+                  "value": "release"
+                }
+              }
+            }
+          },
+          "schema": {
+            "contentHash": "sha256:fa20d6bdd84711bf7a7a4c845d01d1020163acfdebd2a2d2eeb333901c472e3c",
+            "id": "urn:probability:schema:release@1"
+          }
+        }
+      },
+      "urn:probability:schema:release@1": {
+        "kind": "schema",
+        "formatVersion": 1,
+        "id": "urn:probability:schema:release@1",
+        "contentHash": "sha256:fa20d6bdd84711bf7a7a4c845d01d1020163acfdebd2a2d2eeb333901c472e3c",
+        "dependencies": [],
+        "body": {
+          "description": "Immutable Probability store release manifest.",
+          "relations": {
+            "release": {
+              "fields": {
+                "files": {
+                  "type": {
+                    "items": {
+                      "fields": {
+                        "bytes": {
+                          "kind": "integer"
+                        },
+                        "mediaType": {
+                          "kind": "string"
+                        },
+                        "path": {
+                          "kind": "string"
+                        },
+                        "sha256": {
+                          "kind": "string"
+                        }
+                      },
+                      "kind": "record",
+                      "optional": []
+                    },
+                    "kind": "array"
+                  }
+                },
+                "game": {
+                  "type": {
+                    "kind": "json"
+                  }
+                },
+                "kind": {
+                  "type": {
+                    "kind": "string",
+                    "values": [
+                      "release"
+                    ]
+                  }
+                },
+                "version": {
+                  "type": {
+                    "kind": "integer"
+                  }
+                }
+              },
+              "key": [
+                "kind"
+              ],
+              "relationId": "probability.release@1"
+            }
+          }
+        }
+      }
+    }
+  },
+  "files": [
+    {
+      "path": "pieces/Black_Bishop.gltf",
+      "mediaType": "model/gltf+json",
+      "bytes": 1452,
+      "sha256": "8d9ce987332f1d4524126a29acc542582116b0023df415f825b8fedbbacd6060"
+    },
+    {
+      "path": "pieces/Black_King.gltf",
+      "mediaType": "model/gltf+json",
+      "bytes": 1468,
+      "sha256": "4c53b45ba146ea0f47b2b873748ba4f130a044176f4f276ee71abc0e9f5a223c"
+    },
+    {
+      "path": "pieces/Black_Knight.gltf",
+      "mediaType": "model/gltf+json",
+      "bytes": 1451,
+      "sha256": "35c4d62b533770b03ed207b2895508484c9b8a456808ce9c6e5b6ae00a7df250"
+    },
+    {
+      "path": "pieces/Black_Pawn.gltf",
+      "mediaType": "model/gltf+json",
+      "bytes": 1449,
+      "sha256": "8d637f7feed15c4dfb36704eb8f539938ac22582482370c467e25ec971db34a3"
+    },
+    {
+      "path": "pieces/Black_Queen.gltf",
+      "mediaType": "model/gltf+json",
+      "bytes": 1449,
+      "sha256": "199d3244cd62b145e8525592996fedd07dfb8282fca5994d5183e6e54825f466"
+    },
+    {
+      "path": "pieces/Black_Rook.gltf",
+      "mediaType": "model/gltf+json",
+      "bytes": 1448,
+      "sha256": "124d149eca372c28191118a285477046ef0530db71fcaf1e855ded7c108cf4fa"
+    },
+    {
+      "bytes": 9108,
+      "mediaType": "model/gltf-binary",
+      "path": "pieces/Chess_Board.glb",
+      "sha256": "fcd8954208cc1ab36c24f118840d7064937c5f4e2234c2a0308548d6ab19477e"
+    },
+    {
+      "path": "pieces/White_Bishop.gltf",
+      "mediaType": "model/gltf+json",
+      "bytes": 1367,
+      "sha256": "7115d37878a3a23818dada63ffabd3d4a786a6b94188399c20b588dcd7ed7235"
+    },
+    {
+      "path": "pieces/White_King.gltf",
+      "mediaType": "model/gltf+json",
+      "bytes": 1362,
+      "sha256": "781f1b577b80ef3e24f5fd135fa1b4340b262ab926ab5ba1729b83add15f22bf"
+    },
+    {
+      "path": "pieces/White_Knight.gltf",
+      "mediaType": "model/gltf+json",
+      "bytes": 1366,
+      "sha256": "5da86fb31586bedccb024a08abc40049a8557d96e0faa6499bd3dd04678e53b0"
+    },
+    {
+      "path": "pieces/White_Pawn.gltf",
+      "mediaType": "model/gltf+json",
+      "bytes": 1364,
+      "sha256": "6440b02434e1f619bce863de1a760f041d4caeadab3069e91938b23c29b48b5f"
+    },
+    {
+      "path": "pieces/White_Queen.gltf",
+      "mediaType": "model/gltf+json",
+      "bytes": 1364,
+      "sha256": "0e8f69aa06c851d68746f59eedf8176d3eb3f856a9264325e8567cd2c7fa4e45"
+    },
+    {
+      "path": "pieces/White_Rook.gltf",
+      "mediaType": "model/gltf+json",
+      "bytes": 1363,
+      "sha256": "4deab1469fdda74a67dfedf3c8b69d344c9424311c10e77e8d6b12c89ef907ea"
+    },
+    {
+      "path": "resources/bishop.bin",
+      "mediaType": "application/octet-stream",
+      "bytes": 11712,
+      "sha256": "98fcb2980b2d6011c12f08754572e83d6b2bbd92a7d386444bbd2ae181933e32"
+    },
+    {
+      "path": "resources/king.bin",
+      "mediaType": "application/octet-stream",
+      "bytes": 12984,
+      "sha256": "3bfd62d5d49eb9dee53e8c28c421042e380d220948bad3a369f5b4cc19836c3b"
+    },
+    {
+      "path": "resources/knight.bin",
+      "mediaType": "application/octet-stream",
+      "bytes": 11328,
+      "sha256": "c847863f14319f221259aac06d88a785c3210fc5fbc83aee9c4998cdd679fa1a"
+    },
+    {
+      "path": "resources/pawn.bin",
+      "mediaType": "application/octet-stream",
+      "bytes": 10200,
+      "sha256": "eb1a6ea6333f9c2fbaa2d9a68fed8c3c58b09439f3b289069b7d965d1e8a272e"
+    },
+    {
+      "path": "resources/queen.bin",
+      "mediaType": "application/octet-stream",
+      "bytes": 21000,
+      "sha256": "fae83784a46df76f7dfa89b6e600ba689904c91fff77dbcc6e3098aa18de3d49"
+    },
+    {
+      "path": "resources/rook.bin",
+      "mediaType": "application/octet-stream",
+      "bytes": 12000,
+      "sha256": "0e94c2c3743a170cfceecf3d11c25aee73480c9fc40950f5d8f00ae33f742857"
+    }
+  ],
+  "game": {
+    "@probability": {
+      "declaration": {
+        "formatVersion": 1,
+        "projection": {
+          "kind": "storage-mapping",
+          "storageMapping": {
+            "contentHash": "sha256:c5053edd6f4914ee4afa16bd8297f5060a53fc6953d2eb2794cbd16049d69de6",
+            "id": "urn:probability:mapping:game-automerge@1"
+          }
+        },
+        "storageSchema": {
+          "contentHash": "sha256:d44478925c28f3b90189ae44f782e627e60cf69daf6af43a1a537a1c8b223924",
+          "id": "urn:probability:schema:game@1"
+        }
+      },
+      "schema": {
+        "contentHash": "sha256:d44478925c28f3b90189ae44f782e627e60cf69daf6af43a1a537a1c8b223924",
+        "id": "urn:probability:schema:game@1"
+      },
+      "schemas": {
+        "urn:probability:mapping:game-automerge@1": {
+          "body": {
+            "model": "json-tree-v1",
+            "relations": {
+              "probability.game@1": {
+                "collection": {
+                  "absent": "invalid",
+                  "kind": "singleton",
+                  "path": []
+                },
+                "fields": {
+                  "files": {
+                    "path": [
+                      "files"
+                    ],
+                    "write": {}
+                  },
+                  "importSources": {
+                    "path": [
+                      "importSources"
+                    ],
+                    "write": {}
+                  },
+                  "sourceRelease": {
+                    "path": [
+                      "sourceRelease"
+                    ],
+                    "write": {}
+                  },
+                  "surfaceSize": {
+                    "path": [
+                      "surfaceSize"
+                    ],
+                    "write": {}
+                  },
+                  "title": {
+                    "path": [
+                      "title"
+                    ],
+                    "write": {}
+                  }
+                },
+                "keys": {
+                  "kind": {
+                    "kind": "literal",
+                    "value": "game"
+                  }
+                }
+              },
+              "probability.piece@1": {
+                "collection": {
+                  "absent": "invalid",
+                  "descendants": [
+                    "children"
+                  ],
+                  "kind": "recursive-array",
+                  "path": [
+                    "children"
+                  ]
+                },
+                "fields": {
+                  "fixed": {
+                    "path": [
+                      "fixed"
+                    ],
+                    "write": {}
+                  },
+                  "importSource": {
+                    "path": [
+                      "importSource"
+                    ],
+                    "write": {}
+                  },
+                  "order": {
+                    "kind": "source-metadata",
+                    "value": "collection-position"
+                  },
+                  "parentOccurrenceId": {
+                    "kind": "source-metadata",
+                    "value": "recursive-parent-element-identity"
+                  },
+                  "position": {
+                    "path": [
+                      "position"
+                    ],
+                    "write": {}
+                  },
+                  "rotation": {
+                    "path": [
+                      "rotation"
+                    ],
+                    "write": {}
+                  },
+                  "size": {
+                    "path": [
+                      "size"
+                    ],
+                    "write": {}
+                  },
+                  "src": {
+                    "path": [
+                      "src"
+                    ],
+                    "write": {}
+                  },
+                  "tint": {
+                    "path": [
+                      "tint"
+                    ],
+                    "write": {}
+                  }
+                },
+                "keys": {
+                  "occurrenceId": {
+                    "kind": "source-metadata",
+                    "value": "collection-element-identity"
+                  }
+                }
+              }
+            },
+            "schema": {
+              "contentHash": "sha256:d44478925c28f3b90189ae44f782e627e60cf69daf6af43a1a537a1c8b223924",
+              "id": "urn:probability:schema:game@1"
+            }
+          },
+          "contentHash": "sha256:c5053edd6f4914ee4afa16bd8297f5060a53fc6953d2eb2794cbd16049d69de6",
+          "dependencies": [],
+          "formatVersion": 1,
+          "id": "urn:probability:mapping:game-automerge@1",
+          "kind": "storage-mapping"
+        },
+        "urn:probability:schema:game@1": {
+          "body": {
+            "description": "Probability game state. Pieces are stored as a compact recursive physical tree and projected as ordered rows with source-provided occurrence identity.",
+            "relations": {
+              "game": {
+                "fields": {
+                  "files": {
+                    "optional": true,
+                    "type": {
+                      "kind": "string"
+                    }
+                  },
+                  "importSources": {
+                    "optional": true,
+                    "type": {
+                      "kind": "json"
+                    }
+                  },
+                  "kind": {
+                    "type": {
+                      "kind": "string",
+                      "values": [
+                        "game"
+                      ]
+                    }
+                  },
+                  "sourceRelease": {
+                    "optional": true,
+                    "type": {
+                      "kind": "string"
+                    }
+                  },
+                  "surfaceSize": {
+                    "optional": true,
+                    "type": {
+                      "items": [
+                        {
+                          "kind": "number"
+                        },
+                        {
+                          "kind": "number"
+                        }
+                      ],
+                      "kind": "tuple"
+                    }
+                  },
+                  "title": {
+                    "type": {
+                      "kind": "string"
+                    }
+                  }
+                },
+                "key": [
+                  "kind"
+                ],
+                "relationId": "probability.game@1"
+              },
+              "piece": {
+                "fields": {
+                  "fixed": {
+                    "optional": true,
+                    "type": {
+                      "kind": "boolean"
+                    }
+                  },
+                  "importSource": {
+                    "optional": true,
+                    "type": {
+                      "kind": "string"
+                    }
+                  },
+                  "occurrenceId": {
+                    "type": {
+                      "kind": "string"
+                    }
+                  },
+                  "order": {
+                    "type": {
+                      "kind": "integer"
+                    }
+                  },
+                  "parentOccurrenceId": {
+                    "nullable": true,
+                    "type": {
+                      "kind": "string"
+                    }
+                  },
+                  "position": {
+                    "type": {
+                      "items": [
+                        {
+                          "kind": "number"
+                        },
+                        {
+                          "alternatives": [
+                            {
+                              "kind": "number"
+                            },
+                            {
+                              "kind": "null"
+                            }
+                          ],
+                          "kind": "union"
+                        },
+                        {
+                          "kind": "number"
+                        }
+                      ],
+                      "kind": "tuple"
+                    }
+                  },
+                  "rotation": {
+                    "type": {
+                      "items": [
+                        {
+                          "kind": "number"
+                        },
+                        {
+                          "kind": "number"
+                        },
+                        {
+                          "kind": "number"
+                        }
+                      ],
+                      "kind": "tuple"
+                    }
+                  },
+                  "size": {
+                    "optional": true,
+                    "type": {
+                      "items": [
+                        {
+                          "kind": "number"
+                        },
+                        {
+                          "kind": "number"
+                        },
+                        {
+                          "kind": "number"
+                        }
+                      ],
+                      "kind": "tuple"
+                    }
+                  },
+                  "src": {
+                    "optional": true,
+                    "type": {
+                      "kind": "string"
+                    }
+                  },
+                  "tint": {
+                    "optional": true,
+                    "type": {
+                      "items": [
+                        {
+                          "kind": "number"
+                        },
+                        {
+                          "kind": "number"
+                        },
+                        {
+                          "kind": "number"
+                        },
+                        {
+                          "kind": "number"
+                        }
+                      ],
+                      "kind": "tuple"
+                    }
+                  }
+                },
+                "key": [
+                  "occurrenceId"
+                ],
+                "relationId": "probability.piece@1"
+              }
+            }
+          },
+          "contentHash": "sha256:d44478925c28f3b90189ae44f782e627e60cf69daf6af43a1a537a1c8b223924",
+          "dependencies": [],
+          "formatVersion": 1,
+          "id": "urn:probability:schema:game@1",
+          "kind": "schema"
+        }
+      },
+      "type": "game"
+    },
+    "children": [
+      {
+        "children": [
+          {
+            "children": [],
+            "position": [
+              -0.19973295439999997,
+              null,
+              0.19982812499999997
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "size": [
+              0.03767114197452792,
+              0.0720000472794289,
+              0.03767115670982152
+            ],
+            "src": "pieces/White_Rook.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              -0.14263920439999997,
+              null,
+              0.19982812499999997
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "size": [
+              0.03923555822889002,
+              0.08301050310776707,
+              0.037671158189173576
+            ],
+            "src": "pieces/White_Knight.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              -0.08554545439999998,
+              null,
+              0.19982812499999997
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "size": [
+              0.03767115091522444,
+              0.08489182260292728,
+              0.03767115844194548
+            ],
+            "src": "pieces/White_Bishop.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              -0.028451704399999996,
+              null,
+              0.19982812499999997
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "size": [
+              0.03952872590283915,
+              0.12000003842140929,
+              0.0395286467540893
+            ],
+            "src": "pieces/White_Queen.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              0.028642045599999996,
+              null,
+              0.19982812499999997
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "size": [
+              0.03767114868005031,
+              0.13358517354404606,
+              0.03767116498432755
+            ],
+            "src": "pieces/White_King.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              0.08573579559999998,
+              null,
+              0.19982812499999997
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "size": [
+              0.03767115091522444,
+              0.08489182260292728,
+              0.03767115844194548
+            ],
+            "src": "pieces/White_Bishop.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              0.14282954559999997,
+              null,
+              0.19982812499999997
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "size": [
+              0.03923555822889002,
+              0.08301050310776707,
+              0.037671158189173576
+            ],
+            "src": "pieces/White_Knight.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              0.19992329559999997,
+              null,
+              0.19982812499999997
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "size": [
+              0.03767114197452792,
+              0.0720000472794289,
+              0.03767115670982152
+            ],
+            "src": "pieces/White_Rook.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              -0.19973295439999997,
+              null,
+              0.14273437499999997
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "size": [
+              0.03767117773731399,
+              0.06450003571053828,
+              0.037671155702128686
+            ],
+            "src": "pieces/White_Pawn.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              -0.14263920439999997,
+              null,
+              0.14273437499999997
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "size": [
+              0.03767117773731399,
+              0.06450003571053828,
+              0.037671155702128686
+            ],
+            "src": "pieces/White_Pawn.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              -0.08554545439999998,
+              null,
+              0.14273437499999997
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "size": [
+              0.03767117773731399,
+              0.06450003571053828,
+              0.037671155702128686
+            ],
+            "src": "pieces/White_Pawn.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              -0.028451704399999996,
+              null,
+              0.14273437499999997
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "size": [
+              0.03767117773731399,
+              0.06450003571053828,
+              0.037671155702128686
+            ],
+            "src": "pieces/White_Pawn.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              0.028642045599999996,
+              null,
+              0.14273437499999997
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "size": [
+              0.03767117773731399,
+              0.06450003571053828,
+              0.037671155702128686
+            ],
+            "src": "pieces/White_Pawn.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              0.08573579559999998,
+              null,
+              0.14273437499999997
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "size": [
+              0.03767117773731399,
+              0.06450003571053828,
+              0.037671155702128686
+            ],
+            "src": "pieces/White_Pawn.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              0.14282954559999997,
+              null,
+              0.14273437499999997
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "size": [
+              0.03767117773731399,
+              0.06450003571053828,
+              0.037671155702128686
+            ],
+            "src": "pieces/White_Pawn.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              0.19992329559999997,
+              null,
+              0.14273437499999997
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "size": [
+              0.03767117773731399,
+              0.06450003571053828,
+              0.037671155702128686
+            ],
+            "src": "pieces/White_Pawn.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              -0.19973295439999997,
+              null,
+              -0.14273437499999997
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.037671159855920955,
+              0.06450001335879399,
+              0.037671155702125675
+            ],
+            "src": "pieces/Black_Pawn.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              -0.14263920439999997,
+              null,
+              -0.14273437499999997
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.037671159855920955,
+              0.06450001335879399,
+              0.037671155702125675
+            ],
+            "src": "pieces/Black_Pawn.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              -0.08554545439999998,
+              null,
+              -0.14273437499999997
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.037671159855920955,
+              0.06450001335879399,
+              0.037671155702125675
+            ],
+            "src": "pieces/Black_Pawn.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              -0.028451704399999996,
+              null,
+              -0.14273437499999997
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.037671159855920955,
+              0.06450001335879399,
+              0.037671155702125675
+            ],
+            "src": "pieces/Black_Pawn.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              0.028642045599999996,
+              null,
+              -0.14273437499999997
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.037671159855920955,
+              0.06450001335879399,
+              0.037671155702125675
+            ],
+            "src": "pieces/Black_Pawn.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              0.08573579559999998,
+              null,
+              -0.14273437499999997
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.037671159855920955,
+              0.06450001335879399,
+              0.037671155702125675
+            ],
+            "src": "pieces/Black_Pawn.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              0.14282954559999997,
+              null,
+              -0.14273437499999997
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.037671159855920955,
+              0.06450001335879399,
+              0.037671155702125675
+            ],
+            "src": "pieces/Black_Pawn.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              0.19992329559999997,
+              null,
+              -0.14273437499999997
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.037671159855920955,
+              0.06450001335879399,
+              0.037671155702125675
+            ],
+            "src": "pieces/Black_Pawn.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              -0.19973295439999997,
+              null,
+              -0.19982812499999997
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.037671159855920955,
+              0.07200010092362,
+              0.0376711924726196
+            ],
+            "src": "pieces/Black_Rook.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              -0.14263920439999997,
+              null,
+              -0.19982812499999997
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.03923556493441241,
+              0.08301046734497619,
+              0.037671158189168774
+            ],
+            "src": "pieces/Black_Knight.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              -0.08554545439999998,
+              null,
+              -0.19982812499999997
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.03767115091522444,
+              0.08489177342908984,
+              0.03767115844193887
+            ],
+            "src": "pieces/Black_Bishop.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              -0.028451704399999996,
+              null,
+              -0.19982812499999997
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.03952872366766502,
+              0.11999999818827195,
+              0.039528664635479334
+            ],
+            "src": "pieces/Black_Queen.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              0.028642045599999996,
+              null,
+              -0.19982812499999997
+            ],
+            "rotation": [
+              0,
+              0.0,
+              0
+            ],
+            "size": [
+              0.03767114644487618,
+              0.13358517354404606,
+              0.03767116498432756
+            ],
+            "src": "pieces/Black_King.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              0.08573579559999998,
+              null,
+              -0.19982812499999997
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.03767115091522444,
+              0.08489177342908984,
+              0.03767115844193887
+            ],
+            "src": "pieces/Black_Bishop.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              0.14282954559999997,
+              null,
+              -0.19982812499999997
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.03923556493441241,
+              0.08301046734497619,
+              0.037671158189168774
+            ],
+            "src": "pieces/Black_Knight.gltf"
+          },
+          {
+            "children": [],
+            "position": [
+              0.19992329559999997,
+              null,
+              -0.19982812499999997
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.037671159855920955,
+              0.07200010092362,
+              0.0376711924726196
+            ],
+            "src": "pieces/Black_Rook.gltf"
+          }
+        ],
+        "fixed": true,
+        "position": [
+          -9.517059999999999e-05,
+          null,
+          0
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "size": [
+          0.507500193100418,
+          0.028000148928614948,
+          0.5075003693577621
+        ],
+        "src": "pieces/Chess_Board.glb"
+      },
+      {
+        "children": [],
+        "position": [
+          0.34,
+          null,
+          0.2
+        ],
+        "rotation": [
+          0,
+          3.141592653589793,
+          0
+        ],
+        "size": [
+          0.03952872590283915,
+          0.12000003842140929,
+          0.0395286467540893
+        ],
+        "src": "pieces/White_Queen.gltf"
+      },
+      {
+        "children": [],
+        "position": [
+          -0.34,
+          null,
+          -0.2
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          0.03952872366766502,
+          0.11999999818827195,
+          0.039528664635479334
+        ],
+        "src": "pieces/Black_Queen.gltf"
+      }
+    ],
+    "title": "Chess",
+    "surfaceSize": [
+      1,
+      1
+    ]
+  },
+  "version": 1
+}

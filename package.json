@@ -1,12 +1,11 @@
 {
+  "main": "release.json",
   "name": "chess",
-  "version": "0.0.0",
-  "description": "Test chess game for Probability",
+  "version": "0.1.0",
+  "description": "Chess for Probability",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo \"Bundling last commit...\" && mkdir -p dist && git archive -o dist/mod.zip HEAD"
+    "build": "python3 scripts/build.py"
   },
-  "main": "probability.json",
   "author": "Neftaly Hernandez <hello@probability.nz> (https://probability.nz/)",
   "license": "ISC"
 }

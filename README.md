@@ -1,12 +1,10 @@
 # Chess
-This is an example game for Probability.
 
-## Building
-Zip the contents of this folder, and upload to https://mod.io/g/probability.
+An example game for Probability.
 
-You can also run `npm run build` to create a `dist/mod.zip` game file from the last commit.
+The current Play setup is in `release.json`. Models use metre dimensions and every piece has an explicit `size`; resting heights and stacks are resolved by Play.
 
-All assets must be in glTF format (try a tool such as https://convert3d.org/) or GLB.
+Run `npm run build` to package the current working tree into `dist/mod.zip`. This includes uncommitted edits. Load that ZIP with Play → Edit → Create → Load, or open this folder through a template URL.
 
-## Preview
-https://prob.nz/play#template=https://raw.githubusercontent.com/garbo-succus/chess/main/
+Repeated pieces reuse one model per type and colour. Black and white models share geometry buffers while retaining separate materials.
+One spare queen per colour sits beside the board for promotion.
