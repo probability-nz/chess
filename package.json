@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "Chess for Probability",
   "scripts": {
-    "build": "python3 scripts/build.py"
+    "build": "node scripts/build.mjs"
   },
   "author": "Neftaly Hernandez <hello@probability.nz> (https://probability.nz/)",
   "license": "ISC"
