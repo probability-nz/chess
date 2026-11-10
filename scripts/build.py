@@ -7,6 +7,23 @@ import zipfile
 root = Path(__file__).resolve().parent.parent
 manifest_path = root / 'release.json'
 manifest = json.loads(manifest_path.read_text())
+game = manifest.get('game') if isinstance(manifest, dict) else None
+if (
+    not isinstance(manifest, dict)
+    or not isinstance(game, dict)
+    or manifest.get('@patchwork') != {'type': 'probability-release'}
+    or type(manifest.get('version')) is not int
+    or manifest.get('version') != 1
+    or game.get('@patchwork') != {'type': 'probability'}
+    or type(game.get('formatVersion')) is not int
+    or game.get('formatVersion') != 0
+    or '@probability' in manifest
+    or '@probability' in game
+):
+    raise ValueError(
+        'release.json must use the current Play release v1 / game format v0 '
+        'markers, without legacy @probability schema declarations.'
+    )
 for item in manifest['files']:
     data = (root / item['path']).read_bytes()
     item['bytes'] = len(data)
